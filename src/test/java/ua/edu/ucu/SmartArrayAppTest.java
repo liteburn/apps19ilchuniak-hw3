@@ -39,16 +39,4 @@ public class SmartArrayAppTest {
         String[] expectedStudentNames = {"Borek Tomasz", "Kranga Antons", "Sutter Burr"};
         assertArrayEquals(expectedStudentNames, studentNames);
     }
-
-    @Test
-    public void last() {
-        BaseArray a = new BaseArray(new Integer[]{1, 2, 3, 4, 5});
-        MapDecorator b = new MapDecorator(a, x -> (Integer) x * (Integer) x);
-        System.out.println(Arrays.toString(a.toArray()));
-        System.out.println(Arrays.toString(b.toArray()));
-
-        a.setValue(0); // що це працювало додайте метод setValue(int index){array[index] = 0};
-        System.out.println(Arrays.toString(a.toArray()));
-        System.out.println(Arrays.toString(b.toArray()));
-    }
 }
