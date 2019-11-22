@@ -52,8 +52,8 @@ class Student {
     }
 
     @Override
-    public int hashCode(){
-        return (getName().hashCode() + getSurname().hashCode() + (int) (getGPA() * 100) + getYear()) %  2147483647;
+    public int hashCode() {
+        return (getName().hashCode() + getSurname().hashCode() + (int) (getGPA() * 100) + getYear()) % 2147483647;
     }
 
 }

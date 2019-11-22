@@ -1,9 +1,7 @@
 package ua.edu.ucu.smartarr;
 
-import java.util.Arrays;
-
 // Base array for decorators
-public class BaseArray implements SmartArray{
+public class BaseArray implements SmartArray {
     private Object[] arr;
 
     public BaseArray(Object[] array) {
@@ -11,7 +9,7 @@ public class BaseArray implements SmartArray{
     }
 
     @Override
-    public Object[] toArray(){
+    public Object[] toArray() {
         return arr.clone();
     }
 
@@ -25,20 +23,21 @@ public class BaseArray implements SmartArray{
         return arr.length;
     }
 
-    private boolean validIndex(int index){
+    private boolean validIndex(int index) {
         if (!(0 <= index && index < arr.length)) {
             System.out.println("Wrong index");
             return false;
         }
         return true;
     }
-    public void setValue(int index, Object value){
+
+    public void setValue(int index, Object value) {
         if (validIndex(index)) {
             arr[index] = value;
         }
     }
 
-    public void setValue(int index){
+    public void setValue(int index) {
         if (validIndex(index)) {
             arr[index] = 0;
         }

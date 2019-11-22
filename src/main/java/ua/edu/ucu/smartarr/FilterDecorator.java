@@ -14,8 +14,12 @@ public class FilterDecorator extends SmartArrayDecorator {
     }
 
     public Object[] toArray() {
+        if (size() == 0) {
+            arr = new Object[0];
+            return arr.clone();
+        }
         arr = Arrays.stream(smartArray.toArray()).filter(mypred::test).toArray();
-        return arr;
+        return arr.clone();
     }
 
     @Override
