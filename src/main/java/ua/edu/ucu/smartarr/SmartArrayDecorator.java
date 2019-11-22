@@ -7,6 +7,7 @@ abstract class SmartArrayDecorator implements SmartArray {
 
     public SmartArrayDecorator(SmartArray smartArray) {
         this.smartArray = smartArray;
+        this.arr = toArray();
     }
 
     @Override
